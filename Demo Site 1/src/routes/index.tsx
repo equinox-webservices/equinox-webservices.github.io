@@ -6,6 +6,18 @@ import { QuoteForm } from '@/components/quote-form';
 import { business, getCallHref } from '@/lib/business';
 import homeImage from '@/assets/home-service.jpg';
 
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App'; // Or wherever your core component layout lives
+import './index.css'; // Your styles
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+
 const title = 'Your Company Name | Local Home Services & Free Quotes';
 const description = 'Local home repairs, property maintenance and home improvements. Tell Your Company Name about your project and request a free quote.';
 export const Route = createFileRoute('/')({ component: Index, head: () => ({
